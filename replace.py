@@ -2,7 +2,7 @@
 
 # Arrays of patterns
 before = ["`$", "$`", "``` math", "```"]
-after  = ["$", "$", "$$", "SS"]
+after  = ["$", "$", "$$", "$$"]
 
 def replace_all(text, before, after):
     for b, a in zip(before, after):
