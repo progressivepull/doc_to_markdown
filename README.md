@@ -18,6 +18,8 @@ Code
 
 project/
 
+```
+
 │
 
 ├── run.sh
@@ -25,72 +27,68 @@ project/
 ├── replace.py
 
 └── main.md
+```
 
 You can explore each component further using File structure or
 Replacement logic.
 
 **🐍 replace.py (Python Program)**
 
-python
+``` python
 
-\#!/usr/bin/env python3
+#!/usr/bin/env python3
 
-\# Arrays of patterns
-
-before = \["\`\$", "\$\`", "\`\`\` math", "\`\`\`"\]
-
-after = \["\$", "\$", "\$\$", "SS"\]
+# Arrays of patterns
+before = ["`$", "$`", "``` math", "```"]
+after  = ["$", "$", "$$", "SS"]
 
 def replace_all(text, before, after):
-
-for b, a in zip(before, after):
-
-text = text.replace(b, a)
-
-return text
+    for b, a in zip(before, after):
+        text = text.replace(b, a)
+    return text
 
 def main():
+    input_file = "main.md"
+    output_file = "final.md"
 
-input_file = "main.md"
+    with open(input_file, "r", encoding="utf-8") as f:
+        content = f.read()
 
-output_file = "final.md"
+    updated = replace_all(content, before, after)
 
-with open(input_file, "r", encoding="utf-8") as f:
+    with open(output_file, "w", encoding="utf-8") as f:
+        f.write(updated)
 
-content = f.read()
+    print(f"Created {output_file}")
 
-updated = replace_all(content, before, after)
+if __name__ == "__main__":
+    main()
 
-with open(output_file, "w", encoding="utf-8") as f:
-
-f.write(updated)
-
-print(f"Created {output_file}")
-
-if \_\_name\_\_ == "\_\_main\_\_":
-
-main()
+```
 
 You can dive deeper into Python arrays or File reading.
 
 **🖥️ run.sh (Bash Script)**
 
-bash
+``` bash
 
-\#!/bin/bash
+#!/bin/bash
 
-\# Run the Python replacement script
+# Run the Python replacement script
 
 python3 replace.py
+```
 
 Make it executable:
 
-Code
+``` Code
 
 chmod +x run.sh
+```
 
 Run it:
 
-Code
+``` Code
 
 ./run.sh
+```
