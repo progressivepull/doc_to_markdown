@@ -1,0 +1,4 @@
+
+cd D:\pinkt\Documents\OneDrive\Desktop\doc to markdown
+
+D:\pinkt\Documents\OneDrive\Desktop\doc to markdown>pandoc -t gfm --extract-media . "main.docx" -o main.md
