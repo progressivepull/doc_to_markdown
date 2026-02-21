@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+# Convert Mircosoft Word to Markdown
+echo 'Word File convert to Markdown'
 pandoc -t gfm --extract-media . "main.docx" -o main.md
 
 # Run the Python replacement script 
