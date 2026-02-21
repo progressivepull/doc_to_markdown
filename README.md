@@ -29,6 +29,8 @@ cd /D/pinkt/Documents/OneDrive/Desktop/doc_to_markdown
 $ cd D:\pinkt\Documents\OneDrive\Desktop\doc_to_markdown
 ```
 
+# Code  
+
 ##  Search to Change Characters in File
 
 Here you go — a clean, reproducible setup that gives you:
@@ -124,4 +126,27 @@ Run it:
 ``` Code
 
 ./run.sh
+```
+## 🐍 Updated replace.py — now deletes main.md
+
+Here’s a clean rewrite of your Python program so that instead of reading main.md, it deletes it.
+
+``` python
+#!/usr/bin/env python3
+import os
+
+def main():
+    filename = "main.md"
+
+    # Check if file exists before deleting
+    if os.path.exists(filename):
+        os.remove(filename)
+        print(f"Deleted {filename}")
+    else:
+        print(f"{filename} does not exist")
+
+if __name__ == "__main__":
+    main()
+
+
 ```
