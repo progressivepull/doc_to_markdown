@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 # Arrays of patterns
-before = ["`$", "$`", "``` math", "```"]
-after  = ["$", "$", "$$", "$$"]
+before = ["`$",     "$`",       "``` math",         "```" ]
+after  = ["$",      "$",        "$$",               "$$"]
 
 def replace_all(text, before, after):
     for b, a in zip(before, after):
