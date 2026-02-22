@@ -8,4 +8,4 @@ pandoc -t gfm --extract-media . "main.docx" -o main.md
 python replace.py
 
 # Delete the file main.md
-python delete_file.py
+python delete_file.py main.md
