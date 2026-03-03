@@ -1,6 +1,17 @@
 
 # Microsoft Document to Markdown
 
+## Instructions to Uses Repo
+
+Place the syntax in Microsoft Word first, then run the following commands to generate the markdown file. 
+
+``` bash
+$ ./run
+```
+
+To Delete 
+
+
 ## Convert Mirosoft Word Documents to Markdown
 
 * [Pandoc a Universal Document Converter](https://pandoc.org/)
