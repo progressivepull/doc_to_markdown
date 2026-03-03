@@ -3,13 +3,17 @@
 
 ## Instructions to Uses Repo
 
-Place the syntax in Microsoft Word first, then run the following commands to generate the markdown file. 
+Place the syntax in Microsoft Word first, then run the following commands to generate the markdown file.  This will generate a Markdown file named **final.md**.
 
 ``` bash
 $ ./run
 ```
+The following command will delete the **final.md** file from the command line.
 
-To Delete 
+``` bash
+$ ./clean
+```
+
 
 
 ## Convert Mirosoft Word Documents to Markdown
